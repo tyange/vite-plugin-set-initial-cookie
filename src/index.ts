@@ -1,12 +1,15 @@
 import { Plugin, ViteDevServer } from "vite";
-import { Cookies } from "./types";
+import { SerializableCookies } from "./types";
+import serializeCookies from "./serialize-cookie";
 
-export default function viteSetInitialCookie(cookies: Cookies): Plugin {
+export default function viteSetInitialCookie(
+  serializableCookies: SerializableCookies
+): Plugin {
   return {
     name: "set-initial-cookie",
     configureServer(server: ViteDevServer) {
       server.middlewares.use((_, res, next) => {
-        res.setHeader("Set-Cookie", [...cookies]);
+        res.setHeader("Set-Cookie", [...serializeCookies(serializableCookies)]);
         next();
       });
     },

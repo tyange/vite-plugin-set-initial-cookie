@@ -13,5 +13,7 @@ export default function viteSetInitialCookie(
         next();
       });
     },
+    enforce: "post",
+    apply: "serve",
   };
 }

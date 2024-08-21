@@ -15,7 +15,7 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
       vite:
-        specifier: ^5.4.1
+        specifier: ^5
         version: 5.4.1
     devDependencies:
       vitest:

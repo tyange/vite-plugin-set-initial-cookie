@@ -8,7 +8,6 @@ export type SerializableCookie = {
   secure?: boolean;
   httpOnly?: boolean;
   sameSite?: "Strict" | "Lax" | "None";
-  priority?: "Low" | "Medium" | "High";
   partitioned?: boolean;
 };
 

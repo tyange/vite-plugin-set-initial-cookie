@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-set-initial-cookie",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vite plugin for set initial cookie",
   "keywords": [
     "vite",

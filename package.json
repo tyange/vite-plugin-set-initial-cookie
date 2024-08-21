@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-set-initial-cookie",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vite plugin for set initial cookie",
   "keywords": [
     "vite",
@@ -30,13 +30,13 @@
   "repository": "https://github.com/tyange/vite-plugin-set-initial-cookie.git",
   "author": "tyange <usun16@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "tsup": "^8.2.4",
-    "typescript": "^5.5.4",
-    "vite": "^5"
+  "peerDependencies": {
+    "vite": "^2 || ^3 || ^4 || ^5"
   },
   "devDependencies": {
-    "vitest": "^2.0.5"
+    "tsup": "^6 || ^7 || ^8",
+    "typescript": "^4 || ^5",
+    "vitest": "^0 || ^1 || ^2"
   },
   "homepage": "https://github.com/tyange/vite-plugin-set-initial-cookie"
 }

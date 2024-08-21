@@ -1,20 +1,35 @@
 {
   "name": "vite-plugin-set-initial-cookie",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsup src/index.ts",
-    "test": "vitest"
-  },
+  "description": "Vite plugin for set initial cookie",
   "keywords": [
     "vite",
     "vite-plugin",
     "cookie",
     "set-cookie"
   ],
-  "author": "",
-  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/index.js",
+    "dist/index.mjs",
+    "dist/index.d.ts"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts",
+    "test": "vitest"
+  },
+  "repository": "https://github.com/tyange/vite-plugin-set-initial-cookie.git",
+  "author": "tyange <usun16@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "tsup": "^8.2.4",
     "typescript": "^5.5.4",
@@ -22,5 +37,6 @@
   },
   "devDependencies": {
     "vitest": "^2.0.5"
-  }
+  },
+  "homepage": "https://github.com/tyange/vite-plugin-set-initial-cookie"
 }

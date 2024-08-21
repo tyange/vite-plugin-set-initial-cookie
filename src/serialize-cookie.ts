@@ -10,20 +10,37 @@ export default function serializeCookies(
       )}`,
     ];
 
-    if (serializableCookie.domain)
+    if (serializableCookie.domain) {
       parts.push(`Domain=${serializableCookie.domain}`);
-    if (serializableCookie.path) parts.push(`Path=${serializableCookie.path}`);
-    if (serializableCookie.expires)
+    }
+
+    if (serializableCookie.path) {
+      parts.push(`Path=${serializableCookie.path}`);
+    }
+
+    if (serializableCookie.expires) {
       parts.push(`Expires=${serializableCookie.expires.toUTCString()}`);
-    if (serializableCookie.maxAge)
+    }
+
+    if (serializableCookie.maxAge) {
       parts.push(`Max-Age=${serializableCookie.maxAge}`);
-    if (serializableCookie.secure) parts.push("Secure");
-    if (serializableCookie.httpOnly) parts.push("HttpOnly");
-    if (serializableCookie.sameSite)
+    }
+
+    if (serializableCookie.sameSite) {
       parts.push(`SameSite=${serializableCookie.sameSite}`);
-    if (serializableCookie.priority)
-      parts.push(`Priority=${serializableCookie.priority}`);
-    if (serializableCookie.partitioned) parts.push("Partitioned");
+    }
+
+    if (serializableCookie.secure) {
+      parts.push("Secure");
+    }
+
+    if (serializableCookie.httpOnly) {
+      parts.push("HttpOnly");
+    }
+
+    if (serializableCookie.partitioned) {
+      parts.push("Partitioned");
+    }
 
     return parts.join("; ");
   });
